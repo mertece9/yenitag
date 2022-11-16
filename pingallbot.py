@@ -187,7 +187,7 @@ async def admins(client, message):
       if owner.username == None:
         text2 += f"👑 Kurucu\n└ {owner.mention}\n\n👮🏻 adminler\n"
       else:
-        text2 += f"👑 Kutucu\n└ @{owner.username}\n\n👮🏻 adminler\n"
+        text2 += f"👑 Kurucu\n└ @{owner.username}\n\n👮🏻 adminler\n"
     except:
       text2 += f"👑 Kurucu\n└ <i>anonim</i>\n\n👮🏻 adminler\n"
     if len(adminList) == 0:
