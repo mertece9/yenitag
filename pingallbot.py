@@ -80,9 +80,9 @@ async def everyone(client, message):
                 pass  
               i = i+j
           if i == lenMembersList:    
-            await message.reply(f"✅  Başarılı etiket **Toplam sayı {i} üyeler**.\n❌ Botlar ve silinen hesaplar iptal edildi.") 
+            await message.reply(f"✅  Başarılı etiket **Toplam sayı {i} kullanıcı**.\n❌ Botlar ve silinen hesaplar iptal edildi.") 
           else:
-            await message.reply(f"✅  Başarılı etiket **{i} üyeler.**\n❌  Botlar ve silinen hesaplar iptal edildi.")    
+            await message.reply(f"✅  Başarılı etiket **{i} kullanıcı.**\n❌  Botlar ve silinen hesaplar iptal edildi.")    
           chatQueue.remove(message.chat.id)
     else:
       await message.reply("👮 Üzgünüm, **Sadece yöneticiler** Bu komutu kullanabilir.")  
