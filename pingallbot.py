@@ -185,11 +185,11 @@ async def admins(client, message):
     try:
       owner = ownerList[0]
       if owner.username == None:
-        text2 += f"👑 kurucu\n└ {owner.mention}\n\n👮🏻 adminler\n"
+        text2 += f"👑 Kurucu\n└ {owner.mention}\n\n👮🏻 adminler\n"
       else:
-        text2 += f"👑 kutucu\n└ @{owner.username}\n\n👮🏻 adminler\n"
+        text2 += f"👑 Kutucu\n└ @{owner.username}\n\n👮🏻 adminler\n"
     except:
-      text2 += f"👑 kurucu\n└ <i>anonim</i>\n\n👮🏻 adminler\n"
+      text2 += f"👑 Kurucu\n└ <i>anonim</i>\n\n👮🏻 adminler\n"
     if len(adminList) == 0:
       text2 += "└ <i>Gizli Yöneticiler</i>"  
       await teletips.send_message(message.chat.id, text2)   
@@ -206,7 +206,7 @@ async def admins(client, message):
           text2 += f"└ {admin.mention}\n\n"
         else:
           text2 += f"└ @{admin.username}\n\n"
-      text2 += f"✅ | **Toplam  yönetici sayısı**: {lenAdminList}\n❌  Botlar ve gizli Yöneticiler"  
+      text2 += f"✅  **Toplam  yönetici sayısı**: {lenAdminList}\n❌  Botlar ve gizli Yöneticiler"  
       await teletips.send_message(message.chat.id, text2)           
   except FloodWait as e:
     await asyncio.sleep(e.value)       
@@ -225,7 +225,7 @@ async def bots(client, message):
     else:    
       bot = botList.pop(0)
       text3 += f"└ @{bot.username}\n\n"
-      text3 += f"✅ | **  Toplam bot sayısı**: {lenBotList}"  
+      text3 += f"✅  **  Toplam bot sayısı**: {lenBotList}"  
       await teletips.send_message(message.chat.id, text3)
   except FloodWait as e:
     await asyncio.sleep(e.value)
