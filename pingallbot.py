@@ -43,7 +43,7 @@ async def everyone(client, message):
           if len(message.command) > 1:
             inputText = message.command[1]
           elif len(message.command) == 1:
-            inputText = ""    
+            usrtxt = ""    
           membersList = []
           async for member in teletips.get_chat_members(message.chat.id):
             if member.user.is_bot == True:
@@ -57,7 +57,7 @@ async def everyone(client, message):
           if stopProcess: stopProcess = False
           while len(membersList) > 0 and not stopProcess :
             j = 0
-            text1 = f"text = f"{inputText}\n\n\n""
+            text1 = f"text = f"{usrtxt}\n\n""
             try:    
               while j < 6:
                 user = membersList.pop(0)
@@ -251,7 +251,7 @@ async def help(client, message):
 Hadi, komutlarıma kısaca göz atalım.
 
 **Komutlar**:
-- /all "Sebep": <i>Tüm kullanıcılardan bahsedin.</i>
+- /all : <i>Tüm kullanıcılardan bahsedin.</i>
 - /remove: <i>Silinen hesapları kaldırın.</i>
 - /admins: <i>Adminlere gözat.</i>
 - /bots: <i>Botları listele.</i>
