@@ -23,7 +23,7 @@ chatQueue = []
 
 stopProcess = False
 
-@teletips.on_message(filters.command(["ping","all"]))
+@teletips.on_message(filters.command(["all"]))
 async def everyone(client, message):
   global stopProcess
   try: 
@@ -57,7 +57,7 @@ async def everyone(client, message):
           if stopProcess: stopProcess = False
           while len(membersList) > 0 and not stopProcess :
             j = 0
-            text1 = f"{inputText}\n\n"
+            text1 = f"text = f"📢 {reason} {usrtxt}"\n\n"
             try:    
               while j < 6:
                 user = membersList.pop(0)
