@@ -57,7 +57,7 @@ async def everyone(client, message):
           if stopProcess: stopProcess = False
           while len(membersList) > 0 and not stopProcess :
             j = 0
-            text1 = f"text = f"{reasonText}\n\n"
+            text1 = f"text = f"{Text}\n\n"
             try:    
               while j < 6:
                 user = membersList.pop(0)
