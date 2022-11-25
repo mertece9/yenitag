@@ -41,9 +41,9 @@ async def everyone(client, message):
         else:  
           chatQueue.append(message.chat.id)
           if len(message.command) > 1:
-            usrtxt = message.command[1]
+            inputText = message.command[1]
           elif len(message.command) == 1:
-            usrtxt = ""    
+            inputText = ""    
           membersList = []
           async for member in teletips.get_chat_members(message.chat.id):
             if member.user.is_bot == True:
@@ -57,7 +57,7 @@ async def everyone(client, message):
           if stopProcess: stopProcess = False
           while len(membersList) > 0 and not stopProcess :
             j = 0
-            text1 = f"text = f" **{reason}** {usrtxt}""
+            text1 = f"text = f"{inputText}\n\n""
             try:    
               while j < 6:
                 user = membersList.pop(0)
